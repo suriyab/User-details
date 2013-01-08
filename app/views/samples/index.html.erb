@@ -1,0 +1,27 @@
+<h1>Hello, World!</h1> 
+<table>
+	<tr><td> Id: </td>
+		<td>Name:</td>
+		<td>Mail id:</td>
+		<td>Phone:</td>
+		<td>Religion</td>
+		
+	</tr>
+	<% @samples.each do |s| %>
+	<tr>
+		<td> <%= s.id %></td>
+		<td> <%= s.name %></td>
+		<td> <%= s.email%></td>
+		<td> <%= s.phone %></td>
+		<td> <%= s.religion %></td>
+		
+	</tr>
+	<tr>
+		
+		<td> <%= link_to 'Show',:action=>'show',:id=>s.id %></td>
+		<td> <%= link_to 'edit',:action=>'edit',:id=>s.id %></td>
+		<td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end%>
+</table>
+ <%= link_to 'New',:action=>'new' %>

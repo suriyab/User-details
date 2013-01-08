@@ -1,0 +1,13 @@
+<%= form_for @samples,:url=> {:controller=>'samples',:action=>'update'} do |s| %>
+<%=s.label :name%></br>
+<%=s.text_field :name%></br>
+<%=s.label :email%></br>
+<%=s.text_field :email%></br>
+<%=s.label :phone%></br>
+<%=s.text_field :phone%></br>
+<%=s.label :religion%></br>
+<%=s.text_field :religion%></br>
+</br><%=s.submit 'submit'%></br>
+<% end %>
+
+<%= link_to 'back',:action=>'index'%>

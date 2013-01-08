@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<center>
+	<p>
+		<b>id:</b>
+		<%= @samples.id%>
+	</p>
+	<p>
+		<b>Name:</b>
+		<%= @samples.name%>
+	</p>
+	<p>
+		<b>Mail id:</b>
+	    <%= @samples.email%>
+	</p>
+	<p>
+		<b>Phone:</b>
+        <%= @samples.phone%>	
+	</p>
+	<%= link_to 'edit',:action=>'edit',:id=>@samples.id %>
+	<%= link_to 'back',:action=>'index'%>
+	</center>
